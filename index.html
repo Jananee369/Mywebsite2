@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mysteries of Space 🌌</title>
+
+    <!-- Google Fonts: Space-themed typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ========== LOADING SCREEN ========== -->
+    <div id="loader">
+        <canvas id="loaderCanvas"></canvas>
+        <div class="loader-text">
+            <span class="loader-title">INITIALIZING</span>
+            <div class="loader-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+            <span class="loader-sub">Connecting to the cosmos...</span>
+        </div>
+    </div>
+
+    <!-- ========== CURSOR GLOW ========== -->
+    <div id="cursorGlow"></div>
+    <div id="cursorDot"></div>
+
+    <!-- ========== SCROLL PROGRESS BAR ========== -->
+    <div id="scrollProgress"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <i class="fas fa-meteor"></i>
+            <span>MysteriSpace</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#black-holes">Black Holes</a></li>
+            <li><a href="#dark-matter">Dark Matter</a></li>
+            <li><a href="#alien-life">Alien Life</a></li>
+            <li><a href="#cosmic-events">Cosmic Events</a></li>
+            <li><a href="#fun-facts">Fun Facts</a></li>
+            <li><a href="#interactive">Did You Know?</a></li>
+        </ul>
+        <div class="nav-controls">
+            <!-- Music Toggle -->
+            <button id="musicToggle" title="Toggle Space Ambient Music">
+                <i class="fas fa-music" id="musicIcon"></i>
+            </button>
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero">
+        <!-- Animated star canvas -->
+        <canvas id="starCanvas"></canvas>
+
+        <!-- Nebula overlays -->
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+
+        <!-- Shooting stars -->
+        <div class="shooting-stars">
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+        </div>
+
+        <div class="hero-content" data-parallax="0.3">
+            <div class="hero-badge">
+                <i class="fas fa-satellite"></i>
+                <span>Journey Beyond The Known</span>
+            </div>
+            <h1 class="hero-title">
+                Mysteries of Space
+                <span class="hero-emoji">🌌</span>
+            </h1>
+            <p class="hero-subtitle">Explore the unknown depths of the universe</p>
+            <p class="hero-desc">
+                Dive into the cosmic abyss where black holes swallow light, dark matter shapes reality, 
+                and alien civilizations may await discovery across billions of stars.
+            </p>
+            <div class="hero-buttons">
+                <a href="#black-holes" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Exploring
+                </a>
+                <a href="#fun-facts" class="btn btn-secondary">
+                    <i class="fas fa-star"></i>
+                    Fun Facts
+                </a>
+            </div>
+            <!-- Floating stats -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num" data-count="2000">0</span><span>+</span>
+                    <span class="stat-label">Known Exoplanets</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="200">0</span><span>B+</span>
+                    <span class="stat-label">Galaxies in Universe</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num" data-count="13">0</span><span>.8B yrs</span>
+                    <span class="stat-label">Age of Universe</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ========== BLACK HOLES SECTION ========== -->
+    <section id="black-holes" class="section">
+        <div class="section-bg parallax-bg" style="background-image: url('https://sspark.genspark.ai/cfimages?u1=kd83m3xlFjyF2tTVYOIeK4FD4g7UJlUcRUZL1DGYXvyXWamYxswoungNu9JEFWi3wiKciVPhzjVF0OxpOmY5C13RTHVHrbb5KFLI7hbV2w2ZhXOq%2FcDNaMBB5daYEeNEN5icYqn6gTj%2FjvxwxUQ3vGRLNHNsRue6%2FsD2gw5V8On4VRg9%2F7kSZdZoOlj0HNanwHbeSfgi2UPseQaKcps%2B&u2=mKbjSeP333n8PhK1&width=2560');"></div>
+        <div class="section-overlay"></div>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-circle"></i> Section 01</div>
+                <h2 class="section-title glow-text">Black Holes</h2>
+                <p class="section-subtitle">Where gravity defeats even light itself</p>
+            </div>
+
+            <div class="bh-layout">
+                <!-- Left: Black Hole Animation -->
+                <div class="bh-visual" data-animate="fadeLeft">
+                    <div class="blackhole-container">
+                        <div class="blackhole-glow"></div>
+                        <div class="accretion-disk"></div>
+                        <div class="accretion-disk disk-2"></div>
+                        <div class="blackhole-core">
+                            <div class="blackhole-inner"></div>
+                        </div>
+                        <div class="photon-ring"></div>
+                        <!-- Orbiting particles -->
+                        <div class="orbit-particle p1"></div>
+                        <div class="orbit-particle p2"></div>
+                        <div class="orbit-particle p3"></div>
+                    </div>
+                    <p class="visual-caption">Artist's Impression of a Black Hole System</p>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="bh-content" data-animate="fadeRight">
+                    <h3 class="content-title">What is a Black Hole?</h3>
+                    <p class="content-text">
+                        A black hole is a region of spacetime where gravity is so incredibly strong that 
+                        <span class="highlight">nothing — not even light</span> — can escape once it crosses 
+                        the event horizon. They form when massive stars collapse under their own gravity at 
+                        the end of their life cycle.
+                    </p>
+
+                    <!-- Fact Cards -->
+                    <div class="fact-grid">
+                        <div class="fact-card" data-animate="fadeUp">
+                            <div class="fact-icon"><i class="fas fa-atom"></i></div>
+                            <div class="fact-body">
+                                <h4>Event Horizon</h4>
+                                <p>The point of no return — cross it, and you're gone forever. Not even light escapes.</p>
+                            </div>
+                        </div>
+                        <div class="fact-card" data-animate="fadeUp">
+                            <div class="fact-icon"><i class="fas fa-clock"></i></div>
+                            <div class="fact-body">
+                                <h4>Time Dilation</h4>
+                                <p>Time slows down near a black hole. 1 hour near one = years on Earth!</p>
+                            </div>
+                        </div>
+                        <div class="fact-card" data-animate="fadeUp">
+                            <div class="fact-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                            <div class="fact-body">
+                                <h4>Spaghettification</h4>
+                                <p>Tidal forces would stretch you into a strand of spaghetti — literally!</p>
+                            </div>
+                        </div>
+                        <div class="fact-card" data-animate="fadeUp">
+                            <div class="fact-icon"><i class="fas fa-weight-hanging"></i></div>
+                            <div class="fact-body">
+                                <h4>Extreme Gravity</h4>
+                                <p>Supermassive black holes can be billions of times the mass of our Sun.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wow-stat">
+                        <span class="wow-num">40 Billion</span>
+                        <span class="wow-unit">km</span>
+                        <span class="wow-desc">— diameter of M87*, the first black hole ever photographed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DARK MATTER SECTION ========== -->
+    <section id="dark-matter" class="section section-alt">
+        <div class="section-overlay dark-overlay"></div>
+        <!-- Particle canvas for dark matter animation -->
+        <canvas id="particleCanvas"></canvas>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-eye-slash"></i> Section 02</div>
+                <h2 class="section-title glow-text purple-glow">Dark Matter & Dark Energy</h2>
+                <p class="section-subtitle">95% of the universe is a complete mystery</p>
+            </div>
+
+            <div class="dm-layout">
+                <!-- Universe Composition Pie -->
+                <div class="dm-chart" data-animate="fadeLeft">
+                    <div class="universe-pie">
+                        <div class="pie-ring">
+                            <svg viewBox="0 0 200 200" class="pie-svg">
+                                <!-- Dark Energy: 68% -->
+                                <circle class="pie-segment dark-energy-seg" cx="100" cy="100" r="80"
+                                    stroke-dasharray="339.3 160.7"
+                                    stroke-dashoffset="0"/>
+                                <!-- Dark Matter: 27% -->
+                                <circle class="pie-segment dark-matter-seg" cx="100" cy="100" r="80"
+                                    stroke-dasharray="134.9 365.1"
+                                    stroke-dashoffset="-339.3"/>
+                                <!-- Normal Matter: 5% -->
+                                <circle class="pie-segment normal-matter-seg" cx="100" cy="100" r="80"
+                                    stroke-dasharray="25.1 474.9"
+                                    stroke-dashoffset="-474.2"/>
+                            </svg>
+                            <div class="pie-center">
+                                <span>Universe</span>
+                                <span>Composition</span>
+                            </div>
+                        </div>
+                        <div class="pie-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot de"></span>
+                                <span class="legend-label">Dark Energy</span>
+                                <span class="legend-pct">68%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot dm"></span>
+                                <span class="legend-label">Dark Matter</span>
+                                <span class="legend-pct">27%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot nm"></span>
+                                <span class="legend-label">Normal Matter</span>
+                                <span class="legend-pct">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="dm-content" data-animate="fadeRight">
+                    <div class="dm-block">
+                        <div class="dm-icon"><i class="fas fa-eye-slash"></i></div>
+                        <div>
+                            <h3>Dark Matter</h3>
+                            <p>It doesn't emit, absorb, or reflect light — yet it makes up <span class="highlight">27% of the universe</span>. 
+                            We know it exists because of its gravitational effects on galaxies. Without it, galaxies would fly apart!</p>
+                        </div>
+                    </div>
+                    <div class="dm-block">
+                        <div class="dm-icon purple"><i class="fas fa-infinity"></i></div>
+                        <div>
+                            <h3>Dark Energy</h3>
+                            <p>An even more mysterious force making up <span class="highlight">68% of the universe</span>. 
+                            It's driving the accelerating expansion of the cosmos — pushing galaxies apart at increasing speed.</p>
+                        </div>
+                    </div>
+                    <div class="dm-block">
+                        <div class="dm-icon cyan"><i class="fas fa-question-circle"></i></div>
+                        <div>
+                            <h3>Why So Mysterious?</h3>
+                            <p>Despite decades of research, scientists have <span class="highlight">never directly detected</span> dark matter 
+                            or dark energy. We only know of their existence through cosmic observations. The universe is hiding its biggest secrets!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ALIEN LIFE SECTION ========== -->
+    <section id="alien-life" class="section">
+        <div class="section-overlay alien-overlay"></div>
+        <div class="nebula-bg"></div>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-alien-monster">👽</i> Section 03</div>
+                <h2 class="section-title glow-text green-glow">Alien Life 👽</h2>
+                <p class="section-subtitle">Are we alone in this cosmic ocean?</p>
+            </div>
+
+            <!-- Drake Equation Banner -->
+            <div class="drake-banner" data-animate="fadeUp">
+                <div class="drake-content">
+                    <span class="drake-label">The Fermi Paradox</span>
+                    <p>"If the universe is so vast and old, where is everybody?"</p>
+                    <span class="drake-author">— Enrico Fermi, 1950</span>
+                </div>
+            </div>
+
+            <!-- Planet Cards -->
+            <div class="planet-grid" data-animate="fadeUp">
+                <div class="planet-card" data-tilt>
+                    <div class="planet-icon">🌍</div>
+                    <div class="planet-tag habitable">Habitable Zone</div>
+                    <h3>Earth-like Planets</h3>
+                    <p>Thousands of exoplanets have been discovered in the "Goldilocks Zone" — not too hot, not too cold for liquid water.</p>
+                    <div class="planet-stat">
+                        <span>4,500+</span>
+                        <span>Confirmed Exoplanets</span>
+                    </div>
+                </div>
+                <div class="planet-card featured" data-tilt>
+                    <div class="planet-icon">🔴</div>
+                    <div class="planet-tag possible">Possible Life</div>
+                    <h3>Mars</h3>
+                    <p>Ancient Mars had liquid water and a thicker atmosphere. Microbial life may have existed — or still hide underground today.</p>
+                    <div class="planet-stat">
+                        <span>225M km</span>
+                        <span>From Earth</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-tilt>
+                    <div class="planet-icon">🌊</div>
+                    <div class="planet-tag ocean">Ocean World</div>
+                    <h3>Europa (Jupiter's Moon)</h3>
+                    <p>Hidden beneath a frozen ice shell lies a vast ocean. Hydrothermal vents could support alien life just like on Earth!</p>
+                    <div class="planet-stat">
+                        <span>100 km</span>
+                        <span>Deep Ocean</span>
+                    </div>
+                </div>
+                <div class="planet-card" data-tilt>
+                    <div class="planet-icon">💛</div>
+                    <div class="planet-tag titan">Saturn's Moon</div>
+                    <h3>Titan</h3>
+                    <p>Has lakes of liquid methane and a dense atmosphere. Could host exotic life forms entirely unlike anything on Earth.</p>
+                    <div class="planet-stat">
+                        <span>-179°C</span>
+                        <span>Surface Temp</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETI Bar -->
+            <div class="seti-bar" data-animate="fadeUp">
+                <div class="seti-content">
+                    <div class="seti-icon">📡</div>
+                    <div>
+                        <h3>SETI: Search for Extraterrestrial Intelligence</h3>
+                        <p>Since 1960, humans have been scanning the sky for radio signals from alien civilizations. The search continues... and the universe is still listening.</p>
+                    </div>
+                    <div class="seti-stat">
+                        <span>60+</span>
+                        <span>Years Searching</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COSMIC EVENTS SECTION ========== -->
+    <section id="cosmic-events" class="section section-alt">
+        <canvas id="cosmicCanvas"></canvas>
+        <div class="section-overlay"></div>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-bolt"></i> Section 04</div>
+                <h2 class="section-title glow-text orange-glow">Cosmic Events</h2>
+                <p class="section-subtitle">The universe's most violent & spectacular phenomena</p>
+            </div>
+
+            <div class="events-grid">
+
+                <!-- Supernova -->
+                <div class="event-card" data-animate="fadeUp" data-delay="0">
+                    <div class="event-visual supernova-visual">
+                        <div class="event-anim supernova-anim"></div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">⭐ Supernova</div>
+                        <h3>Stellar Explosion</h3>
+                        <p>When a massive star exhausts its fuel, it collapses and explodes with the power of <strong>billions of suns</strong> combined. They seed the universe with heavy elements — including the iron in your blood!</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-fire"></i> 10 billion °C peak</span>
+                            <span><i class="fas fa-expand-arrows-alt"></i> Outshines entire galaxies</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gamma-Ray Bursts -->
+                <div class="event-card" data-animate="fadeUp" data-delay="100">
+                    <div class="event-visual grb-visual">
+                        <div class="event-anim grb-anim"></div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">💥 GRB</div>
+                        <h3>Gamma-Ray Bursts</h3>
+                        <p>The most energetic explosions ever observed. A single burst releases more energy in <strong>seconds</strong> than our Sun will produce in its entire 10-billion-year lifetime.</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-clock"></i> Lasts 0.1 – 1000 seconds</span>
+                            <span><i class="fas fa-bolt"></i> Speed of light jets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neutron Stars -->
+                <div class="event-card" data-animate="fadeUp" data-delay="200">
+                    <div class="event-visual neutron-visual">
+                        <div class="event-anim neutron-anim"></div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">🌀 Neutron Star</div>
+                        <h3>Pulsars & Magnetars</h3>
+                        <p>The crushed core of a dead star, packed into a ball just 20 km wide. A teaspoon of neutron star material would weigh <strong>a billion tonnes</strong>. Pulsars spin up to 700 times per second!</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-weight-hanging"></i> 1 billion tons/teaspoon</span>
+                            <span><i class="fas fa-sync-alt"></i> 700 rotations/second</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gravitational Waves -->
+                <div class="event-card" data-animate="fadeUp" data-delay="300">
+                    <div class="event-visual gwave-visual">
+                        <div class="event-anim gwave-anim">
+                            <div class="wave-ring"></div>
+                            <div class="wave-ring"></div>
+                            <div class="wave-ring"></div>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">🌊 Gravity Waves</div>
+                        <h3>Gravitational Waves</h3>
+                        <p>Ripples in the fabric of spacetime itself, caused by merging black holes or neutron stars. First detected in 2015, they pass through everything — including you — right now!</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-wave-square"></i> Travel at light speed</span>
+                            <span><i class="fas fa-ruler"></i> Distort space by 1/1000th of a proton</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quasars -->
+                <div class="event-card" data-animate="fadeUp" data-delay="400">
+                    <div class="event-visual quasar-visual">
+                        <div class="event-anim quasar-anim"></div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">✨ Quasar</div>
+                        <h3>Quasars</h3>
+                        <p>The brightest objects in the universe — powered by supermassive black holes consuming enormous amounts of matter. A single quasar outshines <strong>entire galaxies</strong> of 100 billion stars.</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-sun"></i> 1000x a galaxy's brightness</span>
+                            <span><i class="fas fa-history"></i> 13+ billion light-years away</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Big Bang -->
+                <div class="event-card" data-animate="fadeUp" data-delay="500">
+                    <div class="event-visual bigbang-visual">
+                        <div class="event-anim bigbang-anim"></div>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-badge">🔥 Big Bang</div>
+                        <h3>Birth of the Universe</h3>
+                        <p>13.8 billion years ago, all of space, time, matter and energy exploded from an infinitely small point. In the first second, the universe was hotter than any star that has ever existed.</p>
+                        <div class="event-facts">
+                            <span><i class="fas fa-thermometer-full"></i> 10^32 °C at birth</span>
+                            <span><i class="fas fa-calendar"></i> 13.8 billion years old</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FUN FACTS SECTION ========== -->
+    <section id="fun-facts" class="section">
+        <div class="nebula nebula-4"></div>
+        <div class="section-overlay fun-overlay"></div>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-brain"></i> Section 05</div>
+                <h2 class="section-title glow-text">Mind-Blowing Facts</h2>
+                <p class="section-subtitle">Prepare to have your mind shattered</p>
+            </div>
+
+            <!-- Flip Cards Grid -->
+            <div class="flip-grid">
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">☀️</div>
+                            <h3>The Sun's Age</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">🤯</div>
+                            <p>The light you see from the Sun is <strong>8 minutes old</strong> — that's how long it takes light to travel from the Sun to Earth. The photons themselves may have taken <strong>100,000 years</strong> to escape from the Sun's core!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">⭐</div>
+                            <h3>More Stars Than...</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">😱</div>
+                            <p>There are more stars in the observable universe than there are <strong>grains of sand on ALL of Earth's beaches combined</strong>. That's roughly 10 sextillion stars — a 1 followed by 22 zeros!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">🌌</div>
+                            <h3>Galaxy Collision</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">🚀</div>
+                            <p>The Andromeda Galaxy is heading toward us at <strong>110 km/second</strong> and will collide with the Milky Way in about <strong>4.5 billion years</strong>. But don't worry — space is so vast, few stars will actually crash!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">🧊</div>
+                            <h3>Space Temperature</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">🥶</div>
+                            <p>Space is almost at <strong>absolute zero (-273.15°C)</strong>, but it's not the coldest place ever! Scientists have cooled gases in labs to just <strong>billionths of a degree</strong> above absolute zero!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">🌀</div>
+                            <h3>You're Made of Stars</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">✨</div>
+                            <p>Every atom in your body heavier than hydrogen was forged in the <strong>heart of dying stars</strong>. The calcium in your bones, the iron in your blood — all created in stellar explosions billions of years ago. You are literally stardust!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card" data-animate="fadeUp">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <div class="flip-icon">🕳️</div>
+                            <h3>Void of Space</h3>
+                            <p class="flip-hint">Tap to reveal</p>
+                        </div>
+                        <div class="flip-back">
+                            <div class="flip-icon">😶</div>
+                            <p>If you removed all the empty space from every atom in every human on Earth, all 8 billion of us would fit in a <strong>sugar cube</strong>. Atoms are mostly empty space — and so are you!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTERACTIVE DID YOU KNOW? SECTION ========== -->
+    <section id="interactive" class="section section-alt">
+        <canvas id="interactiveCanvas"></canvas>
+        <div class="section-overlay"></div>
+
+        <div class="container">
+            <div class="section-header" data-animate="fadeUp">
+                <div class="section-tag"><i class="fas fa-magic"></i> Section 06</div>
+                <h2 class="section-title glow-text">Did You Know? 🤔</h2>
+                <p class="section-subtitle">Every click reveals a new cosmic wonder</p>
+            </div>
+
+            <div class="dyk-container" data-animate="fadeUp">
+                <div class="dyk-card" id="dykCard">
+                    <div class="dyk-number" id="dykNumber">01</div>
+                    <div class="dyk-icon" id="dykIcon">🌌</div>
+                    <p class="dyk-text" id="dykText">
+                        The observable universe is about 93 billion light-years in diameter — but the actual universe could be infinitely larger!
+                    </p>
+                    <div class="dyk-category" id="dykCategory">Cosmology</div>
+                </div>
+
+                <button class="btn btn-primary btn-dyk" id="dykBtn">
+                    <i class="fas fa-random"></i>
+                    Discover Another Fact!
+                </button>
+
+                <div class="dyk-progress">
+                    <span id="dykCurrent">1</span> / <span id="dykTotal">20</span> facts explored
+                </div>
+            </div>
+
+            <!-- Space Quiz Mini-Game -->
+            <div class="quiz-container" data-animate="fadeUp">
+                <h3 class="quiz-title"><i class="fas fa-question-circle"></i> Quick Space Quiz</h3>
+                <div class="quiz-card" id="quizCard">
+                    <p class="quiz-question" id="quizQuestion">Which planet has the most moons in our solar system?</p>
+                    <div class="quiz-options" id="quizOptions">
+                        <button class="quiz-opt" data-answer="false">Jupiter</button>
+                        <button class="quiz-opt" data-answer="true">Saturn</button>
+                        <button class="quiz-opt" data-answer="false">Uranus</button>
+                        <button class="quiz-opt" data-answer="false">Neptune</button>
+                    </div>
+                    <div class="quiz-result" id="quizResult"></div>
+                    <button class="btn btn-secondary btn-quiz" id="nextQuizBtn" style="display:none;">
+                        Next Question <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="quiz-score">Score: <span id="quizScore">0</span> / <span id="quizTotal">0</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer">
+        <div class="footer-stars"></div>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Logo & Quote -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-meteor"></i>
+                        <span>MysteriSpace</span>
+                    </div>
+                    <blockquote class="footer-quote">
+                        "The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself."
+                        <cite>— Carl Sagan</cite>
+                    </blockquote>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#black-holes"><i class="fas fa-circle"></i> Black Holes</a></li>
+                        <li><a href="#dark-matter"><i class="fas fa-eye-slash"></i> Dark Matter</a></li>
+                        <li><a href="#alien-life"><i class="fas fa-user-astronaut"></i> Alien Life</a></li>
+                        <li><a href="#cosmic-events"><i class="fas fa-bolt"></i> Cosmic Events</a></li>
+                        <li><a href="#fun-facts"><i class="fas fa-brain"></i> Fun Facts</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Credits -->
+                <div class="footer-social">
+                    <h4>Connect with the Cosmos</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon" title="Reddit"><i class="fab fa-reddit"></i></a>
+                        <a href="#" class="social-icon" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                    <div class="nasa-credit">
+                        <i class="fas fa-satellite-dish"></i>
+                        <span>Data & inspiration from NASA, ESA & the James Webb Space Telescope</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 MysteriSpace · Crafted with 🌟 among the stars · All content for educational purposes</p>
+                <div class="back-to-top" id="backToTop">
+                    <i class="fas fa-chevron-up"></i>
+                    <span>Back to Top</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== AUDIO ELEMENT ========== -->
+    <!-- Space ambient audio - using a public domain space sound -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundjay.com/misc/sounds/space-ambiance-1.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/stars.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
